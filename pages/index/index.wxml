@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container" style="padding:0">
+  <label>五子棋</label>
+</view>
+<view class="main">
+  <view wx:for="{{row}}" class="main-box" wx:for-item="i">
+    <view wx:for="{{col}}" class="item-box" bindtap="dian" data-row="{{i}}" data-col="{{j}}"  wx:for-item="j"><label class="{{all[i*10+j]===0?'':all[i*10+j]===1?'icon-hei':'icon-bai'}}"></label></view>
+  </view>
+</view>
